@@ -1,0 +1,28 @@
+# Robot Framework configuration file
+# https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#configuration-files
+
+[robot]
+# Output directory for test results
+outputdir = results
+
+# Test data paths
+test = tests
+
+# Include tags (run only these tests)
+# include = smoke
+
+# Exclude tags (skip these tests)
+# exclude = slow
+
+# Variables
+variable = BROWSER:chrome
+variable = HEADLESS:False
+
+# Listeners
+# listener = MyListener.py
+
+# Log level
+loglevel = INFO
+
+# Documentation
+doc = Automated tests for the-internet.herokuapp.com using Robot Framework and Selenium
