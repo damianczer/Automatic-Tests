@@ -1,9 +1,9 @@
 # Quick Reference Guide - Robot Framework Test Project
 
 ## ✅ Project Status
-- ✅ All files converted to English
 - ✅ Working A/B Testing tests (5 test cases)
 - ✅ Working Add/Remove Elements tests (8 test cases)
+- ✅ Working Basic Auth tests (8 test cases)
 - ✅ Proper project structure with best practices
 - ✅ CI/CD pipeline configured
 - ✅ Cross-browser support (Chrome, Firefox)
@@ -21,6 +21,12 @@ run_tests.bat smoke
 # Run A/B Testing tests only
 run_tests.bat ab_testing
 
+# Run Add/Remove Elements tests only
+run_tests.bat add_remove
+
+# Run Basic Auth tests only
+run_tests.bat basic_auth
+
 # Run in headless mode
 run_tests.bat headless
 ```
@@ -36,6 +42,7 @@ python -m robot -v BROWSER:firefox -d results tests/
 # Run tests with tags
 python -m robot -i smoke -d results tests/
 python -m robot -i functionality -d results tests/
+python -m robot -i authentication -d results tests/
 python -m robot -e slow -d results tests/
 
 # Run specific test case
@@ -64,14 +71,27 @@ python -m robot -L DEBUG -d results tests/
 - **TC007**: Remove all elements
 - **TC008**: Performance test with many elements
 
+### Basic Auth (`tests/basic_auth.robot`)
+- **TC001**: Check Basic Auth link availability on homepage
+- **TC002**: Navigate to Basic Auth page with credentials
+- **TC003**: Verify Basic Auth success page content
+- **TC004**: Basic Auth via homepage navigation
+- **TC005**: Multiple Basic Auth access attempts
+- **TC006**: Basic Auth page refresh behavior
+- **TC007**: Basic Auth URL structure validation
+- **TC008**: Basic Auth security headers check
+
 ## 🏷️ Available Tags
 - `smoke` - Critical tests that must pass
 - `navigation` - Page navigation tests
 - `content` - Content verification tests
 - `functionality` - Feature functionality tests
 - `performance` - Performance and stress tests
+- `authentication` - Authentication related tests
+- `security` - Security related tests
 - `ab_testing` - A/B Testing specific tests
 - `add_remove` - Add/Remove Elements specific tests
+- `basic_auth` - Basic Auth specific tests
 
 ## 📁 Key Files
 
@@ -85,6 +105,7 @@ python -m robot -L DEBUG -d results tests/
 - `keywords/homepage_keywords.robot` - Homepage interactions
 - `keywords/ab_testing_keywords.robot` - A/B Testing operations
 - `keywords/add_remove_keywords.robot` - Add/Remove Elements operations
+- `keywords/basic_auth_keywords.robot` - Basic Auth operations
 
 ### Results
 - `results/report.html` - High-level test report
@@ -119,7 +140,6 @@ python -m robot --dryrun tests/
 
 ## 📈 Next Steps for Expansion
 Ready to add tests for other the-internet.herokuapp.com features:
-- Basic Auth
 - Checkboxes
 - Context Menu
 - Drag and Drop

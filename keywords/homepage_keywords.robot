@@ -27,3 +27,7 @@ Verify Link Exists
 Click Add/Remove Elements Link
     [Documentation]    Clicks Add/Remove Elements link on homepage
     Click Element And Wait    ${ADD_REMOVE_LINK}
+
+Click Basic Auth Link
+    [Documentation]    Clicks Basic Auth link on homepage
+    Click Element And Wait    ${BASIC_AUTH_LINK}
