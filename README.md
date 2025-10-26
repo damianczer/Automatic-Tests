@@ -135,6 +135,7 @@ Automatic-Tests/
 │   ├── ab_testing.robot   # A/B Testing functionality tests (5 tests)
 │   ├── add_remove_elements.robot  # Add/Remove Elements tests (8 tests)
 │   ├── basic_auth.robot   # Basic Auth functionality tests (8 tests)
+│   ├── checkboxes.robot   # Checkboxes functionality tests (8 tests)
 │   └── ...                # Additional test files
 ├── keywords/              # Keyword files (reusable functions)
 │   ├── common_keywords.robot     # Common browser operations
@@ -142,6 +143,7 @@ Automatic-Tests/
 │   ├── ab_testing_keywords.robot # A/B Testing specific operations
 │   ├── add_remove_keywords.robot # Add/Remove Elements operations
 │   ├── basic_auth_keywords.robot # Basic Auth operations
+│   ├── checkboxes_keywords.robot # Checkboxes operations
 │   └── ...                # Additional keyword files
 ├── resources/             # Resource files (variables, configuration)
 │   └── variables.robot    # Global variables and URLs
@@ -175,9 +177,8 @@ run_tests.bat basic_auth
 
 # Run Checkboxes tests only (8 test cases)
 run_tests.bat checkboxes
-run_tests.bat add_remove
 
-# Run Basic Auth tests only (8 test cases)
+# Run in headless mode
 run_tests.bat basic_auth
 
 # Run tests in headless mode (no browser window)
@@ -201,6 +202,9 @@ python -m robot -d results tests/add_remove_elements.robot
 
 # Basic Auth (8 test cases)
 python -m robot -d results tests/basic_auth.robot
+
+# Checkboxes (8 test cases)
+python -m robot -d results tests/checkboxes.robot
 ```
 
 #### Run tests with specific browser:
@@ -217,14 +221,17 @@ python -m robot -v BROWSER:chrome -v HEADLESS:True -d results tests/
 
 #### Run tests with tags:
 ```bash
-# Run only smoke tests (6 test cases)
+# Run only smoke tests (8 test cases)
 python -m robot -i smoke -d results tests/
 
-# Run authentication tests (8 test cases)
+# Run authentication tests (Basic Auth - 8 test cases)
 python -m robot -i authentication -d results tests/
 
 # Run functionality tests (multiple test cases)
 python -m robot -i functionality -d results tests/
+
+# Run form elements tests
+python -m robot -i forms -d results tests/
 
 # Run tests excluding slow ones
 python -m robot -e slow -d results tests/
@@ -232,6 +239,7 @@ python -m robot -e slow -d results tests/
 # Run specific functionality tests
 python -m robot -i ab_testing -d results tests/
 python -m robot -i basic_auth -d results tests/
+python -m robot -i checkboxes -d results tests/
 ```
 
 ## Test Results
@@ -302,6 +310,19 @@ Tests HTTP Basic Authentication functionality:
 - TC008: Basic Auth security headers check
 
 **Tags:** `smoke`, `navigation`, `content`, `functionality`, `authentication`, `security`, `basic_auth`
+
+### Checkboxes (`tests/checkboxes.robot`)
+Tests form elements and checkbox state management:
+- TC001: Check Checkboxes link availability on homepage
+- TC002: Navigate to Checkboxes page
+- TC003: Verify Checkboxes page content
+- TC004: Check initial checkbox states
+- TC005: Toggle first checkbox
+- TC006: Toggle second checkbox
+- TC007: Multiple checkbox operations
+- TC008: Checkbox persistence test
+
+**Tags:** `smoke`, `navigation`, `content`, `functionality`, `forms`, `checkboxes`
 
 ## Best Practices
 
