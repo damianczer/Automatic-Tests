@@ -1,4 +1,15 @@
-# Automatic Tests - Robot Framework + Selenium
+# 🤖 Automatic Smoke Tests - Robot Framework & Selenium
+
+![GitHub stars](https://img.shields.io/github/stars/damianczer/automatic-tests?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/damianczer/automatic-tests?style=social)
+![GitHub issues](https://img.shields.io/github/issues/damianczer/automatic-tests?style=flat-square)
+
+## 👨‍💻 Author
+
+[Damian Czerwiński](https://github.com/damianczer/)
+
+---
+
 
 > **Production-ready test automation suite with comprehensive web testing scenarios**
 
@@ -12,6 +23,15 @@ This is a **complete test automation framework** that provides:
 - ✅ **CI/CD integration** with GitHub Actions
 - ✅ **Comprehensive reporting** with HTML reports and logs
 - ✅ **Modular architecture** with reusable keywords and page objects
+
+## 🛠️ Technologies Used
+
+- Robot Framework - [User Guide](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html)
+- Selenium Library - [Documentation](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html)
+- The Internet [Test Application](https://the-internet.herokuapp.com/)
+- Robot - [Syntax](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#test-data-syntax)
+
+---
 
 ## 🚀 What's included?
 
@@ -32,6 +52,16 @@ Currently implemented test suites covering **29 test scenarios**:
 - 🔐 **Security testing** with authentication flows
 - 📱 **Headless mode** for CI/CD environments
 - 🎯 **Tag-based test execution** for targeted testing
+
+## 🧑🏻‍💻 Example
+
+<img width="692" height="312" alt="image" src="https://github.com/user-attachments/assets/3586fcf9-ad17-46ca-810c-7efd01138b34" />
+
+Raport:
+
+<img width="913" height="890" alt="image" src="https://github.com/user-attachments/assets/af25dfc8-8fcf-4112-afc3-c300d6613a3d" />
+
+
 
 ## 📈 Test Results Dashboard
 
@@ -321,17 +351,3 @@ The project includes GitHub Actions workflow (`.github/workflows/robot-tests.yml
 - Tests with both Chrome and Firefox
 - Runs daily at 6:00 UTC
 - Uploads test results as artifacts
-
-## Contributing
-
-1. Create feature branch from `develop`
-2. Add tests following existing patterns
-3. Ensure all tests pass locally
-4. Submit pull request with clear description
-
-## Useful Links
-
-- [Robot Framework User Guide](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html)
-- [SeleniumLibrary Documentation](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html)
-- [The Internet - Test Application](https://the-internet.herokuapp.com/)
-- [Robot Framework Syntax](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#test-data-syntax)
