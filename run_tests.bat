@@ -14,6 +14,9 @@ if "%1"=="smoke" (
 ) else if "%1"=="basic_auth" (
     echo Running Basic Auth tests...
     python -m robot -d results tests/basic_auth.robot
+) else if "%1"=="checkboxes" (
+    echo Running Checkboxes tests...
+    python -m robot -d results tests/checkboxes.robot
 ) else if "%1"=="headless" (
     echo Running tests in headless mode...
     python -m robot -v HEADLESS:True -d results tests/

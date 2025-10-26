@@ -4,6 +4,7 @@ ${BASE_URL}              https://the-internet.herokuapp.com
 ${AB_TESTING_URL}        ${BASE_URL}/abtest
 ${ADD_REMOVE_URL}        ${BASE_URL}/add_remove_elements/
 ${BASIC_AUTH_URL}        ${BASE_URL}/basic_auth
+${CHECKBOXES_URL}        ${BASE_URL}/checkboxes
 
 # Basic Auth credentials
 ${BASIC_AUTH_USER}       admin
@@ -24,6 +25,9 @@ ${WINDOW_HEIGHT}         1080
 ${AB_TESTING_LINK}       xpath=//a[@href='/abtest']
 ${ADD_REMOVE_LINK}       xpath=//a[@href='/add_remove_elements/']
 ${BASIC_AUTH_LINK}       xpath=//a[@href='/basic_auth']
+${CHECKBOXES_LINK}       xpath=//a[@href='/checkboxes']
 ${ADD_ELEMENT_BUTTON}    xpath=//button[text()='Add Element']
 ${DELETE_BUTTON}         xpath=//button[contains(text(),'Delete')]
+${CHECKBOX_1}            xpath=//input[@type='checkbox'][1]
+${CHECKBOX_2}            xpath=//input[@type='checkbox'][2]
 ${PAGE_HEADER}           tag=h3

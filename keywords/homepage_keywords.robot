@@ -31,3 +31,7 @@ Click Add/Remove Elements Link
 Click Basic Auth Link
     [Documentation]    Clicks Basic Auth link on homepage
     Click Element And Wait    ${BASIC_AUTH_LINK}
+
+Click Checkboxes Link
+    [Documentation]    Clicks Checkboxes link on homepage
+    Click Element And Wait    ${CHECKBOXES_LINK}

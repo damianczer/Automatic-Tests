@@ -16,13 +16,14 @@ This is a **complete test automation framework** that provides:
 ## 🚀 What's included?
 
 ### Test Coverage
-Currently implemented test suites covering **21 test scenarios**:
+Currently implemented test suites covering **29 test scenarios**:
 
 | Test Suite | Test Cases | Coverage |
 |------------|------------|----------|
 | **A/B Testing** | 5 scenarios | Variant testing, page refresh, content validation |
 | **Add/Remove Elements** | 8 scenarios | DOM manipulation, performance testing |
 | **Basic Auth** | 8 scenarios | HTTP authentication, security validation |
+| **Checkboxes** | 8 scenarios | Form elements, state management, persistence testing |
 
 ### Key Features
 - 🔍 **Smoke tests** for critical functionality validation
@@ -127,16 +128,23 @@ Automatic-Tests/
 ### Quick Start (Windows)
 Use the provided batch script for easy test execution:
 ```cmd
-# Run all tests (21 test cases)
+# Run all tests (29 test cases)
 run_tests.bat
 
-# Run only smoke tests (6 critical test cases)
+# Run only smoke tests (8 critical test cases)
 run_tests.bat smoke
 
 # Run A/B Testing tests only (5 test cases)
 run_tests.bat ab_testing
 
 # Run Add/Remove Elements tests only (8 test cases)
+run_tests.bat add_remove
+
+# Run Basic Auth tests only (8 test cases)
+run_tests.bat basic_auth
+
+# Run Checkboxes tests only (8 test cases)
+run_tests.bat checkboxes
 run_tests.bat add_remove
 
 # Run Basic Auth tests only (8 test cases)

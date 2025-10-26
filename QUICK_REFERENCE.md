@@ -4,6 +4,7 @@
 - ✅ Working A/B Testing tests (5 test cases)
 - ✅ Working Add/Remove Elements tests (8 test cases)
 - ✅ Working Basic Auth tests (8 test cases)
+- ✅ Working Checkboxes tests (8 test cases)
 - ✅ Proper project structure with best practices
 - ✅ CI/CD pipeline configured
 - ✅ Cross-browser support (Chrome, Firefox)
@@ -27,6 +28,9 @@ run_tests.bat add_remove
 # Run Basic Auth tests only
 run_tests.bat basic_auth
 
+# Run Checkboxes tests only
+run_tests.bat checkboxes
+
 # Run in headless mode
 run_tests.bat headless
 ```
@@ -43,6 +47,7 @@ python -m robot -v BROWSER:firefox -d results tests/
 python -m robot -i smoke -d results tests/
 python -m robot -i functionality -d results tests/
 python -m robot -i authentication -d results tests/
+python -m robot -i forms -d results tests/
 python -m robot -e slow -d results tests/
 
 # Run specific test case
@@ -81,6 +86,16 @@ python -m robot -L DEBUG -d results tests/
 - **TC007**: Basic Auth URL structure validation
 - **TC008**: Basic Auth security headers check
 
+### Checkboxes (`tests/checkboxes.robot`)
+- **TC001**: Check Checkboxes link availability on homepage
+- **TC002**: Navigate to Checkboxes page
+- **TC003**: Verify Checkboxes page content
+- **TC004**: Check initial checkbox states
+- **TC005**: Toggle first checkbox
+- **TC006**: Toggle second checkbox
+- **TC007**: Multiple checkbox operations
+- **TC008**: Checkbox persistence test
+
 ## 🏷️ Available Tags
 - `smoke` - Critical tests that must pass
 - `navigation` - Page navigation tests
@@ -89,9 +104,11 @@ python -m robot -L DEBUG -d results tests/
 - `performance` - Performance and stress tests
 - `authentication` - Authentication related tests
 - `security` - Security related tests
+- `forms` - Form elements testing
 - `ab_testing` - A/B Testing specific tests
 - `add_remove` - Add/Remove Elements specific tests
 - `basic_auth` - Basic Auth specific tests
+- `checkboxes` - Checkboxes specific tests
 
 ## 📁 Key Files
 
@@ -106,6 +123,7 @@ python -m robot -L DEBUG -d results tests/
 - `keywords/ab_testing_keywords.robot` - A/B Testing operations
 - `keywords/add_remove_keywords.robot` - Add/Remove Elements operations
 - `keywords/basic_auth_keywords.robot` - Basic Auth operations
+- `keywords/checkboxes_keywords.robot` - Checkboxes operations
 
 ### Results
 - `results/report.html` - High-level test report
