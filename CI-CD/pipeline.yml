@@ -1,0 +1,62 @@
+name: Robot Framework Tests
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # Run tests everyday at 6:00 UTC
+    - cron: '0 6 * * *'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        browser: [chrome, firefox]
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Install Chrome Browser
+      if: matrix.browser == 'chrome'
+      uses: browser-actions/setup-chrome@latest
+    
+    - name: Install Firefox Browser  
+      if: matrix.browser == 'firefox'
+      uses: browser-actions/setup-firefox@latest
+    
+    - name: Run Smoke Tests
+      run: |
+        python -m robot -v BROWSER:${{ matrix.browser }} -v HEADLESS:True -i smoke -d results tests/
+      continue-on-error: false
+    
+    - name: Run All Tests
+      run: |
+        python -m robot -v BROWSER:${{ matrix.browser }} -v HEADLESS:True -d results tests/
+      continue-on-error: true
+    
+    - name: Upload test results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: robot-results-${{ matrix.browser }}
+        path: results/
+    
+    - name: Publish Test Results
+      uses: EnricoMi/publish-unit-test-result-action@v2
+      if: always()
+      with:
+        files: results/output.xml
