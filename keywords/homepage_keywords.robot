@@ -35,3 +35,7 @@ Click Basic Auth Link
 Click Checkboxes Link
     [Documentation]    Clicks Checkboxes link on homepage
     Click Element And Wait    ${CHECKBOXES_LINK}
+
+Click Context Menu Link
+    [Documentation]    Clicks Context Menu link on homepage
+    Click Element And Wait    ${CONTEXT_MENU_LINK}

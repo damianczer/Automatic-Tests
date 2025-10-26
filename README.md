@@ -36,7 +36,7 @@ This is a **complete test automation framework** that provides:
 ## 🚀 What's included?
 
 ### Test Coverage
-Currently implemented test suites covering **29 test scenarios**:
+Currently implemented test suites covering **37 test scenarios**:
 
 | Test Suite | Test Cases | Coverage |
 |------------|------------|----------|
@@ -44,6 +44,7 @@ Currently implemented test suites covering **29 test scenarios**:
 | **Add/Remove Elements** | 8 scenarios | DOM manipulation, performance testing |
 | **Basic Auth** | 8 scenarios | HTTP authentication, security validation |
 | **Checkboxes** | 8 scenarios | Form elements, state management, persistence testing |
+| **Context Menu** | 8 scenarios | Mouse interactions, element properties, UI testing |
 
 ### Key Features
 - 🔍 **Smoke tests** for critical functionality validation
@@ -136,6 +137,7 @@ Automatic-Tests/
 │   ├── add_remove_elements.robot  # Add/Remove Elements tests (8 tests)
 │   ├── basic_auth.robot   # Basic Auth functionality tests (8 tests)
 │   ├── checkboxes.robot   # Checkboxes functionality tests (8 tests)
+│   ├── context_menu.robot # Context Menu functionality tests (8 tests)
 │   └── ...                # Additional test files
 ├── keywords/              # Keyword files (reusable functions)
 │   ├── common_keywords.robot     # Common browser operations
@@ -144,6 +146,7 @@ Automatic-Tests/
 │   ├── add_remove_keywords.robot # Add/Remove Elements operations
 │   ├── basic_auth_keywords.robot # Basic Auth operations
 │   ├── checkboxes_keywords.robot # Checkboxes operations
+│   ├── context_menu_keywords.robot # Context Menu operations
 │   └── ...                # Additional keyword files
 ├── resources/             # Resource files (variables, configuration)
 │   └── variables.robot    # Global variables and URLs
@@ -160,10 +163,10 @@ Automatic-Tests/
 ### Quick Start (Windows)
 Use the provided batch script for easy test execution:
 ```cmd
-# Run all tests (29 test cases)
+# Run all tests (37 test cases)
 run_tests.bat
 
-# Run only smoke tests (8 critical test cases)
+# Run only smoke tests (10 critical test cases)
 run_tests.bat smoke
 
 # Run A/B Testing tests only (5 test cases)
@@ -177,6 +180,9 @@ run_tests.bat basic_auth
 
 # Run Checkboxes tests only (8 test cases)
 run_tests.bat checkboxes
+
+# Run Context Menu tests only (8 test cases)
+run_tests.bat context_menu
 
 # Run in headless mode
 run_tests.bat basic_auth
@@ -205,6 +211,9 @@ python -m robot -d results tests/basic_auth.robot
 
 # Checkboxes (8 test cases)
 python -m robot -d results tests/checkboxes.robot
+
+# Context Menu (8 test cases)
+python -m robot -d results tests/context_menu.robot
 ```
 
 #### Run tests with specific browser:
@@ -221,7 +230,7 @@ python -m robot -v BROWSER:chrome -v HEADLESS:True -d results tests/
 
 #### Run tests with tags:
 ```bash
-# Run only smoke tests (8 test cases)
+# Run only smoke tests (10 test cases)
 python -m robot -i smoke -d results tests/
 
 # Run authentication tests (Basic Auth - 8 test cases)
@@ -240,6 +249,7 @@ python -m robot -e slow -d results tests/
 python -m robot -i ab_testing -d results tests/
 python -m robot -i basic_auth -d results tests/
 python -m robot -i checkboxes -d results tests/
+python -m robot -i context_menu -d results tests/
 ```
 
 ## Test Results
@@ -323,6 +333,19 @@ Tests form elements and checkbox state management:
 - TC008: Checkbox persistence test
 
 **Tags:** `smoke`, `navigation`, `content`, `functionality`, `forms`, `checkboxes`
+
+### Context Menu (`tests/context_menu.robot`)
+Tests context menu interactions and mouse event handling:
+- TC001: Check Context Menu link availability on homepage
+- TC002: Navigate to Context Menu page
+- TC003: Verify Context Menu page content
+- TC004: Test right click context menu alert (element interaction)
+- TC005: Test context menu element interaction
+- TC006: Test context menu box properties
+- TC007: Multiple context menu box interactions
+- TC008: Context menu page elements verification
+
+**Tags:** `smoke`, `navigation`, `content`, `functionality`, `interaction`, `context_menu`
 
 ## Best Practices
 

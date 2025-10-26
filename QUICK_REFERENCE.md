@@ -5,6 +5,7 @@
 - ✅ Working Add/Remove Elements tests (8 test cases)
 - ✅ Working Basic Auth tests (8 test cases)
 - ✅ Working Checkboxes tests (8 test cases)
+- ✅ Working Context Menu tests (8 test cases)
 - ✅ Proper project structure with best practices
 - ✅ CI/CD pipeline configured
 - ✅ Cross-browser support (Chrome, Firefox)
@@ -30,6 +31,9 @@ run_tests.bat basic_auth
 
 # Run Checkboxes tests only
 run_tests.bat checkboxes
+
+# Run Context Menu tests only
+run_tests.bat context_menu
 
 # Run in headless mode
 run_tests.bat headless
@@ -158,8 +162,6 @@ python -m robot --dryrun tests/
 
 ## 📈 Next Steps for Expansion
 Ready to add tests for other the-internet.herokuapp.com features:
-- Checkboxes
-- Context Menu
 - Drag and Drop
 - Dropdown
 - Dynamic Content

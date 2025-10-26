@@ -17,6 +17,9 @@ if "%1"=="smoke" (
 ) else if "%1"=="checkboxes" (
     echo Running Checkboxes tests...
     python -m robot -d results tests/checkboxes.robot
+) else if "%1"=="context_menu" (
+    echo Running Context Menu tests...
+    python -m robot -d results tests/context_menu.robot
 ) else if "%1"=="headless" (
     echo Running tests in headless mode...
     python -m robot -v HEADLESS:True -d results tests/
