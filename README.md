@@ -36,7 +36,7 @@ This is a **complete test automation framework** that provides:
 ## 🚀 What's included?
 
 ### Test Coverage
-Currently implemented test suites covering **37 test scenarios**:
+Currently implemented test suites covering **45 test scenarios**:
 
 | Test Suite | Test Cases | Coverage |
 |------------|------------|----------|
@@ -45,6 +45,7 @@ Currently implemented test suites covering **37 test scenarios**:
 | **Basic Auth** | 8 scenarios | HTTP authentication, security validation |
 | **Checkboxes** | 8 scenarios | Form elements, state management, persistence testing |
 | **Context Menu** | 8 scenarios | Mouse interactions, element properties, UI testing |
+| **Dropdown** | 8 scenarios | Select elements, form validation, option management |
 
 ### Key Features
 - 🔍 **Smoke tests** for critical functionality validation
@@ -67,14 +68,17 @@ Raport:
 ## 📈 Test Results Dashboard
 
 ```
-Total Tests: 21     ✅ Passing: 21     ❌ Failing: 0     Success Rate: 100%
+Total Tests: 45     ✅ Passing: 45     ❌ Failing: 0     Success Rate: 100%
 ```
 
 **Latest Test Run Results:**
-- **Smoke Tests**: 6/6 passing ✅
+- **Smoke Tests**: 12/12 passing ✅
 - **A/B Testing**: 5/5 passing ✅
 - **Add/Remove Elements**: 8/8 passing ✅
 - **Basic Auth**: 8/8 passing ✅
+- **Checkboxes**: 8/8 passing ✅
+- **Context Menu**: 8/8 passing ✅
+- **Dropdown**: 8/8 passing ✅
 
 ## 🎬 Quick Demo
 
@@ -138,6 +142,7 @@ Automatic-Tests/
 │   ├── basic_auth.robot   # Basic Auth functionality tests (8 tests)
 │   ├── checkboxes.robot   # Checkboxes functionality tests (8 tests)
 │   ├── context_menu.robot # Context Menu functionality tests (8 tests)
+│   ├── dropdown.robot     # Dropdown functionality tests (8 tests)
 │   └── ...                # Additional test files
 ├── keywords/              # Keyword files (reusable functions)
 │   ├── common_keywords.robot     # Common browser operations
@@ -147,6 +152,7 @@ Automatic-Tests/
 │   ├── basic_auth_keywords.robot # Basic Auth operations
 │   ├── checkboxes_keywords.robot # Checkboxes operations
 │   ├── context_menu_keywords.robot # Context Menu operations
+│   ├── dropdown_keywords.robot   # Dropdown operations
 │   └── ...                # Additional keyword files
 ├── resources/             # Resource files (variables, configuration)
 │   └── variables.robot    # Global variables and URLs
@@ -163,10 +169,10 @@ Automatic-Tests/
 ### Quick Start (Windows)
 Use the provided batch script for easy test execution:
 ```cmd
-# Run all tests (37 test cases)
+# Run all tests (45 test cases)
 run_tests.bat
 
-# Run only smoke tests (10 critical test cases)
+# Run only smoke tests (12 critical test cases)
 run_tests.bat smoke
 
 # Run A/B Testing tests only (5 test cases)
@@ -183,6 +189,9 @@ run_tests.bat checkboxes
 
 # Run Context Menu tests only (8 test cases)
 run_tests.bat context_menu
+
+# Run Dropdown tests only (8 test cases)
+run_tests.bat dropdown
 
 # Run in headless mode
 run_tests.bat basic_auth
@@ -214,6 +223,9 @@ python -m robot -d results tests/checkboxes.robot
 
 # Context Menu (8 test cases)
 python -m robot -d results tests/context_menu.robot
+
+# Dropdown (8 test cases)
+python -m robot -d results tests/dropdown.robot
 ```
 
 #### Run tests with specific browser:
@@ -230,7 +242,7 @@ python -m robot -v BROWSER:chrome -v HEADLESS:True -d results tests/
 
 #### Run tests with tags:
 ```bash
-# Run only smoke tests (10 test cases)
+# Run only smoke tests (12 test cases)
 python -m robot -i smoke -d results tests/
 
 # Run authentication tests (Basic Auth - 8 test cases)
@@ -250,6 +262,7 @@ python -m robot -i ab_testing -d results tests/
 python -m robot -i basic_auth -d results tests/
 python -m robot -i checkboxes -d results tests/
 python -m robot -i context_menu -d results tests/
+python -m robot -i dropdown -d results tests/
 ```
 
 ## Test Results
@@ -346,6 +359,19 @@ Tests context menu interactions and mouse event handling:
 - TC008: Context menu page elements verification
 
 **Tags:** `smoke`, `navigation`, `content`, `functionality`, `interaction`, `context_menu`
+
+### Dropdown (`tests/dropdown.robot`)
+Tests dropdown/select element functionality and form interactions:
+- TC001: Check Dropdown link availability on homepage
+- TC002: Navigate to Dropdown page
+- TC003: Verify Dropdown page content
+- TC004: Verify dropdown default state
+- TC005: Select Option 1 from dropdown
+- TC006: Select Option 2 from dropdown
+- TC007: Multiple dropdown selections
+- TC008: Dropdown options verification
+
+**Tags:** `smoke`, `navigation`, `content`, `functionality`, `forms`, `dropdown`
 
 ## Best Practices
 

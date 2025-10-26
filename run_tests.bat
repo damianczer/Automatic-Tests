@@ -20,6 +20,9 @@ if "%1"=="smoke" (
 ) else if "%1"=="context_menu" (
     echo Running Context Menu tests...
     python -m robot -d results tests/context_menu.robot
+) else if "%1"=="dropdown" (
+    echo Running Dropdown tests...
+    python -m robot -d results tests/dropdown.robot
 ) else if "%1"=="headless" (
     echo Running tests in headless mode...
     python -m robot -v HEADLESS:True -d results tests/

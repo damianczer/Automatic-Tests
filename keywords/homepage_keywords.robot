@@ -39,3 +39,7 @@ Click Checkboxes Link
 Click Context Menu Link
     [Documentation]    Clicks Context Menu link on homepage
     Click Element And Wait    ${CONTEXT_MENU_LINK}
+
+Click Dropdown Link
+    [Documentation]    Clicks Dropdown link on homepage
+    Click Element And Wait    ${DROPDOWN_LINK}

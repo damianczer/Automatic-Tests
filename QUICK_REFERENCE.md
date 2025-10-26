@@ -6,6 +6,7 @@
 - ✅ Working Basic Auth tests (8 test cases)
 - ✅ Working Checkboxes tests (8 test cases)
 - ✅ Working Context Menu tests (8 test cases)
+- ✅ Working Dropdown tests (8 test cases)
 - ✅ Proper project structure with best practices
 - ✅ CI/CD pipeline configured
 - ✅ Cross-browser support (Chrome, Firefox)
@@ -34,6 +35,9 @@ run_tests.bat checkboxes
 
 # Run Context Menu tests only
 run_tests.bat context_menu
+
+# Run Dropdown tests only
+run_tests.bat dropdown
 
 # Run in headless mode
 run_tests.bat headless
@@ -100,6 +104,26 @@ python -m robot -L DEBUG -d results tests/
 - **TC007**: Multiple checkbox operations
 - **TC008**: Checkbox persistence test
 
+### Context Menu (`tests/context_menu.robot`)
+- **TC001**: Check Context Menu link availability on homepage
+- **TC002**: Navigate to Context Menu page
+- **TC003**: Verify Context Menu page content
+- **TC004**: Test right click context menu alert (element interaction)
+- **TC005**: Test context menu element interaction
+- **TC006**: Test context menu box properties
+- **TC007**: Multiple context menu box interactions
+- **TC008**: Context menu page elements verification
+
+### Dropdown (`tests/dropdown.robot`)
+- **TC001**: Check Dropdown link availability on homepage
+- **TC002**: Navigate to Dropdown page
+- **TC003**: Verify Dropdown page content
+- **TC004**: Verify dropdown default state
+- **TC005**: Select Option 1 from dropdown
+- **TC006**: Select Option 2 from dropdown
+- **TC007**: Multiple dropdown selections
+- **TC008**: Dropdown options verification
+
 ## 🏷️ Available Tags
 - `smoke` - Critical tests that must pass
 - `navigation` - Page navigation tests
@@ -113,6 +137,8 @@ python -m robot -L DEBUG -d results tests/
 - `add_remove` - Add/Remove Elements specific tests
 - `basic_auth` - Basic Auth specific tests
 - `checkboxes` - Checkboxes specific tests
+- `context_menu` - Context Menu specific tests
+- `dropdown` - Dropdown specific tests
 
 ## 📁 Key Files
 
