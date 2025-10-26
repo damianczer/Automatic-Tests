@@ -1,4 +1,4 @@
-# 🤖 Automatic Smoke Tests - Robot Framework & Selenium
+# 🤖 Automatic Smoke Tests - Robot Framework & Selenium & Web Driver
 
 ![GitHub stars](https://img.shields.io/github/stars/damianczer/automatic-tests?style=social)
 ![GitHub watchers](https://img.shields.io/github/watchers/damianczer/automatic-tests?style=social)
