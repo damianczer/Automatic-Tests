@@ -26,6 +26,9 @@ if "%1"=="smoke" (
 ) else if "%1"=="drag_and_drop" (
     echo Running Drag and Drop tests...
     python -m robot -d results tests/drag_and_drop.robot
+) else if "%1"=="file_upload" (
+    echo Running File Upload tests...
+    python -m robot -d results tests/file_upload.robot
 ) else if "%1"=="headless" (
     echo Running tests in headless mode...
     python -m robot -v HEADLESS:True -d results tests/

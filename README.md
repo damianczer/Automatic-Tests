@@ -36,7 +36,7 @@ This is a **complete test automation framework** that provides:
 ## 🚀 What's included?
 
 ### Test Coverage
-Currently implemented test suites covering **53 test scenarios**:
+Currently implemented test suites covering **61 test scenarios**:
 
 | Test Suite | Test Cases | Coverage |
 |------------|------------|----------|
@@ -47,6 +47,7 @@ Currently implemented test suites covering **53 test scenarios**:
 | **Context Menu** | 8 scenarios | Mouse interactions, element properties, UI testing |
 | **Dropdown** | 8 scenarios | Select elements, form validation, option management |
 | **Drag and Drop** | 8 scenarios | Element manipulation, drag interactions, UI controls |
+| **File Upload** | 8 scenarios | File handling, form submissions, upload validation |
 
 ### Key Features
 - 🔍 **Smoke tests** for critical functionality validation
@@ -69,11 +70,11 @@ Raport:
 ## 📈 Test Results Dashboard
 
 ```
-Total Tests: 53     ✅ Passing: 53     ❌ Failing: 0     Success Rate: 100%
+Total Tests: 61     ✅ Passing: 61     ❌ Failing: 0     Success Rate: 100%
 ```
 
 **Latest Test Run Results:**
-- **Smoke Tests**: 14/14 passing ✅
+- **Smoke Tests**: 16/16 passing ✅
 - **A/B Testing**: 5/5 passing ✅
 - **Add/Remove Elements**: 8/8 passing ✅
 - **Basic Auth**: 8/8 passing ✅
@@ -81,6 +82,7 @@ Total Tests: 53     ✅ Passing: 53     ❌ Failing: 0     Success Rate: 100%
 - **Context Menu**: 8/8 passing ✅
 - **Dropdown**: 8/8 passing ✅
 - **Drag and Drop**: 8/8 passing ✅
+- **File Upload**: 8/8 passing ✅
 
 ## 🎬 Quick Demo
 
@@ -146,6 +148,7 @@ Automatic-Tests/
 │   ├── context_menu.robot # Context Menu functionality tests (8 tests)
 │   ├── dropdown.robot     # Dropdown functionality tests (8 tests)
 │   ├── drag_and_drop.robot # Drag and Drop functionality tests (8 tests)
+│   ├── file_upload.robot  # File Upload functionality tests (8 tests)
 │   └── ...                # Additional test files
 ├── keywords/              # Keyword files (reusable functions)
 │   ├── common_keywords.robot     # Common browser operations
@@ -157,6 +160,7 @@ Automatic-Tests/
 │   ├── context_menu_keywords.robot # Context Menu operations
 │   ├── dropdown_keywords.robot   # Dropdown operations
 │   ├── drag_and_drop_keywords.robot # Drag and Drop operations
+│   ├── file_upload_keywords.robot # File Upload operations
 │   └── ...                # Additional keyword files
 ├── resources/             # Resource files (variables, configuration)
 │   └── variables.robot    # Global variables and URLs
@@ -173,10 +177,10 @@ Automatic-Tests/
 ### Quick Start (Windows)
 Use the provided batch script for easy test execution:
 ```cmd
-# Run all tests (53 test cases)
+# Run all tests (61 test cases)
 run_tests.bat
 
-# Run only smoke tests (14 critical test cases)
+# Run only smoke tests (16 critical test cases)
 run_tests.bat smoke
 
 # Run A/B Testing tests only (5 test cases)
@@ -199,6 +203,9 @@ run_tests.bat dropdown
 
 # Run Drag and Drop tests only (8 test cases)
 run_tests.bat drag_and_drop
+
+# Run File Upload tests only (8 test cases)
+run_tests.bat file_upload
 
 # Run in headless mode
 run_tests.bat basic_auth
@@ -236,6 +243,9 @@ python -m robot -d results tests/dropdown.robot
 
 # Drag and Drop (8 test cases)
 python -m robot -d results tests/drag_and_drop.robot
+
+# File Upload (8 test cases)
+python -m robot -d results tests/file_upload.robot
 ```
 
 #### Run tests with specific browser:
@@ -252,7 +262,7 @@ python -m robot -v BROWSER:chrome -v HEADLESS:True -d results tests/
 
 #### Run tests with tags:
 ```bash
-# Run only smoke tests (14 test cases)
+# Run only smoke tests (16 test cases)
 python -m robot -i smoke -d results tests/
 
 # Run authentication tests (Basic Auth - 8 test cases)
@@ -274,6 +284,7 @@ python -m robot -i checkboxes -d results tests/
 python -m robot -i context_menu -d results tests/
 python -m robot -i dropdown -d results tests/
 python -m robot -i drag_and_drop -d results tests/
+python -m robot -i file_upload -d results tests/
 ```
 
 ## Test Results
@@ -396,6 +407,19 @@ Tests drag and drop interactions and element manipulation:
 - TC008: Drag and drop elements properties verification
 
 **Tags:** `smoke`, `navigation`, `content`, `functionality`, `interaction`, `drag_and_drop`
+
+### File Upload (`tests/file_upload.robot`)
+Tests file upload functionality and form submissions:
+- TC001: Check File Upload link availability on homepage
+- TC002: Navigate to File Upload page
+- TC003: Verify File Upload page content
+- TC004: Verify file upload elements properties
+- TC005: Upload text file
+- TC006: Upload different file types
+- TC007: Multiple file upload operations
+- TC008: File upload form validation
+
+**Tags:** `smoke`, `navigation`, `content`, `functionality`, `forms`, `file_upload`
 
 ## Best Practices
 

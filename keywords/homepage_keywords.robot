@@ -47,3 +47,7 @@ Click Dropdown Link
 Click Drag And Drop Link
     [Documentation]    Clicks Drag and Drop link on homepage
     Click Element And Wait    ${DRAG_AND_DROP_LINK}
+
+Click File Upload Link
+    [Documentation]    Clicks File Upload link on homepage
+    Click Element And Wait    ${FILE_UPLOAD_LINK}

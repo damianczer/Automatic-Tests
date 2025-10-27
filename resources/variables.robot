@@ -8,6 +8,7 @@ ${CHECKBOXES_URL}        ${BASE_URL}/checkboxes
 ${CONTEXT_MENU_URL}      ${BASE_URL}/context_menu
 ${DROPDOWN_URL}          ${BASE_URL}/dropdown
 ${DRAG_AND_DROP_URL}     ${BASE_URL}/drag_and_drop
+${FILE_UPLOAD_URL}       ${BASE_URL}/upload
 
 # Basic Auth credentials
 ${BASIC_AUTH_USER}       admin
@@ -32,6 +33,7 @@ ${CHECKBOXES_LINK}       xpath=//a[@href='/checkboxes']
 ${CONTEXT_MENU_LINK}     xpath=//a[@href='/context_menu']
 ${DROPDOWN_LINK}         xpath=//a[@href='/dropdown']
 ${DRAG_AND_DROP_LINK}    xpath=//a[@href='/drag_and_drop']
+${FILE_UPLOAD_LINK}      xpath=//a[@href='/upload']
 ${ADD_ELEMENT_BUTTON}    xpath=//button[text()='Add Element']
 ${DELETE_BUTTON}         xpath=//button[contains(text(),'Delete')]
 ${CHECKBOX_1}            xpath=//input[@type='checkbox'][1]
@@ -40,4 +42,7 @@ ${CONTEXT_MENU_BOX}      id=hot-spot
 ${DROPDOWN_SELECT}       id=dropdown
 ${DRAG_COLUMN_A}         id=column-a
 ${DRAG_COLUMN_B}         id=column-b
+${FILE_INPUT}            id=file-upload
+${UPLOAD_BUTTON}         id=file-submit
+${UPLOADED_FILES}        id=uploaded-files
 ${PAGE_HEADER}           tag=h3

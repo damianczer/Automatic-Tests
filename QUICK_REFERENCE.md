@@ -8,6 +8,7 @@
 - ✅ Working Context Menu tests (8 test cases)
 - ✅ Working Dropdown tests (8 test cases)
 - ✅ Working Drag and Drop tests (8 test cases)
+- ✅ Working File Upload tests (8 test cases)
 - ✅ Proper project structure with best practices
 - ✅ CI/CD pipeline configured
 - ✅ Cross-browser support (Chrome, Firefox)
@@ -42,6 +43,9 @@ run_tests.bat dropdown
 
 # Run Drag and Drop tests only
 run_tests.bat drag_and_drop
+
+# Run File Upload tests only
+run_tests.bat file_upload
 
 # Run in headless mode
 run_tests.bat headless
@@ -138,6 +142,16 @@ python -m robot -L DEBUG -d results tests/
 - **TC007**: Multiple drag and drop operations
 - **TC008**: Drag and drop elements properties verification
 
+### File Upload (`tests/file_upload.robot`)
+- **TC001**: Check File Upload link availability on homepage
+- **TC002**: Navigate to File Upload page
+- **TC003**: Verify File Upload page content
+- **TC004**: Verify file upload elements properties
+- **TC005**: Upload text file
+- **TC006**: Upload different file types
+- **TC007**: Multiple file upload operations
+- **TC008**: File upload form validation
+
 ## 🏷️ Available Tags
 - `smoke` - Critical tests that must pass
 - `navigation` - Page navigation tests
@@ -154,6 +168,7 @@ python -m robot -L DEBUG -d results tests/
 - `context_menu` - Context Menu specific tests
 - `dropdown` - Dropdown specific tests
 - `drag_and_drop` - Drag and Drop specific tests
+- `file_upload` - File Upload specific tests
 - `interaction` - Interactive element tests
 
 ## 📁 Key Files
