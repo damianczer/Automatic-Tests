@@ -7,6 +7,7 @@
 - ✅ Working Checkboxes tests (8 test cases)
 - ✅ Working Context Menu tests (8 test cases)
 - ✅ Working Dropdown tests (8 test cases)
+- ✅ Working Drag and Drop tests (8 test cases)
 - ✅ Proper project structure with best practices
 - ✅ CI/CD pipeline configured
 - ✅ Cross-browser support (Chrome, Firefox)
@@ -38,6 +39,9 @@ run_tests.bat context_menu
 
 # Run Dropdown tests only
 run_tests.bat dropdown
+
+# Run Drag and Drop tests only
+run_tests.bat drag_and_drop
 
 # Run in headless mode
 run_tests.bat headless
@@ -124,6 +128,16 @@ python -m robot -L DEBUG -d results tests/
 - **TC007**: Multiple dropdown selections
 - **TC008**: Dropdown options verification
 
+### Drag and Drop (`tests/drag_and_drop.robot`)
+- **TC001**: Check Drag and Drop link availability on homepage
+- **TC002**: Navigate to Drag and Drop page
+- **TC003**: Verify Drag and Drop page content
+- **TC004**: Verify initial state of drag and drop elements
+- **TC005**: Drag element from column A to column B
+- **TC006**: Drag element from column B to column A
+- **TC007**: Multiple drag and drop operations
+- **TC008**: Drag and drop elements properties verification
+
 ## 🏷️ Available Tags
 - `smoke` - Critical tests that must pass
 - `navigation` - Page navigation tests
@@ -139,6 +153,8 @@ python -m robot -L DEBUG -d results tests/
 - `checkboxes` - Checkboxes specific tests
 - `context_menu` - Context Menu specific tests
 - `dropdown` - Dropdown specific tests
+- `drag_and_drop` - Drag and Drop specific tests
+- `interaction` - Interactive element tests
 
 ## 📁 Key Files
 
@@ -188,12 +204,13 @@ python -m robot --dryrun tests/
 
 ## 📈 Next Steps for Expansion
 Ready to add tests for other the-internet.herokuapp.com features:
-- Drag and Drop
-- Dropdown
 - Dynamic Content
 - File Upload
 - Form Authentication
 - Hovers
 - JavaScript Alerts
 - Key Presses
+- Inputs
+- Nested Frames
+- Notification Messages
 - And 30+ more examples available on the site

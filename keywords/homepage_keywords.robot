@@ -43,3 +43,7 @@ Click Context Menu Link
 Click Dropdown Link
     [Documentation]    Clicks Dropdown link on homepage
     Click Element And Wait    ${DROPDOWN_LINK}
+
+Click Drag And Drop Link
+    [Documentation]    Clicks Drag and Drop link on homepage
+    Click Element And Wait    ${DRAG_AND_DROP_LINK}

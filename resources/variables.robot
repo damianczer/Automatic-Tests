@@ -7,6 +7,7 @@ ${BASIC_AUTH_URL}        ${BASE_URL}/basic_auth
 ${CHECKBOXES_URL}        ${BASE_URL}/checkboxes
 ${CONTEXT_MENU_URL}      ${BASE_URL}/context_menu
 ${DROPDOWN_URL}          ${BASE_URL}/dropdown
+${DRAG_AND_DROP_URL}     ${BASE_URL}/drag_and_drop
 
 # Basic Auth credentials
 ${BASIC_AUTH_USER}       admin
@@ -30,10 +31,13 @@ ${BASIC_AUTH_LINK}       xpath=//a[@href='/basic_auth']
 ${CHECKBOXES_LINK}       xpath=//a[@href='/checkboxes']
 ${CONTEXT_MENU_LINK}     xpath=//a[@href='/context_menu']
 ${DROPDOWN_LINK}         xpath=//a[@href='/dropdown']
+${DRAG_AND_DROP_LINK}    xpath=//a[@href='/drag_and_drop']
 ${ADD_ELEMENT_BUTTON}    xpath=//button[text()='Add Element']
 ${DELETE_BUTTON}         xpath=//button[contains(text(),'Delete')]
 ${CHECKBOX_1}            xpath=//input[@type='checkbox'][1]
 ${CHECKBOX_2}            xpath=//input[@type='checkbox'][2]
 ${CONTEXT_MENU_BOX}      id=hot-spot
 ${DROPDOWN_SELECT}       id=dropdown
+${DRAG_COLUMN_A}         id=column-a
+${DRAG_COLUMN_B}         id=column-b
 ${PAGE_HEADER}           tag=h3
