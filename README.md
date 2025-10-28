@@ -1,15 +1,8 @@
-# 🤖 Automatic Smoke Tests - Robot Framework & Selenium & Web Driver
+# Automatic Smoke Tests - Robot Framework & Selenium & Web Driver
 
 ![GitHub stars](https://img.shields.io/github/stars/damianczer/automatic-tests?style=social)
 ![GitHub watchers](https://img.shields.io/github/watchers/damianczer/automatic-tests?style=social)
 ![GitHub issues](https://img.shields.io/github/issues/damianczer/automatic-tests?style=flat-square)
-
-## 👨‍💻 Author
-
-[Damian Czerwiński](https://github.com/damianczer/)
-
----
-
 
 > **Production-ready test automation suite with comprehensive web testing scenarios**
 
@@ -30,8 +23,6 @@ This is a **complete test automation framework** that provides:
 - Selenium Library - [Documentation](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html)
 - The Internet [Test Application](https://the-internet.herokuapp.com/)
 - Robot - [Syntax](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#test-data-syntax)
-
----
 
 ## 🚀 What's included?
 
