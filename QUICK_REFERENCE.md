@@ -10,6 +10,7 @@
 - ✅ Working Drag and Drop tests (8 test cases)
 - ✅ Working File Upload tests (8 test cases)
 - ✅ Working JavaScript Alerts tests (8 test cases)
+- ✅ Working Dynamic Loading tests (8 test cases)
 - ✅ Proper project structure with best practices
 - ✅ CI/CD pipeline configured
 - ✅ Cross-browser support (Chrome, Firefox)
@@ -50,6 +51,9 @@ run_tests.bat file_upload
 
 # Run JavaScript Alerts tests only
 run_tests.bat javascript_alerts
+
+# Run Dynamic Loading tests only
+run_tests.bat dynamic_loading
 
 # Run in headless mode
 run_tests.bat headless
@@ -166,6 +170,16 @@ python -m robot -L DEBUG -d results tests/
 - **TC007**: Test JavaScript Prompt dialog
 - **TC008**: Multiple JavaScript alerts operations
 
+### Dynamic Loading (`tests/dynamic_loading.robot`)
+- **TC001**: Check Dynamic Loading link availability on homepage
+- **TC002**: Navigate to Dynamic Loading page
+- **TC003**: Verify Dynamic Loading page content
+- **TC004**: Test dynamic loading Example 1 - hidden element
+- **TC005**: Test dynamic loading Example 2 - rendered element
+- **TC006**: Verify loading states Example 1
+- **TC007**: Verify loading states Example 2
+- **TC008**: Multiple dynamic loading operations
+
 ## 🏷️ Available Tags
 - `smoke` - Critical tests that must pass
 - `navigation` - Page navigation tests
@@ -184,6 +198,8 @@ python -m robot -L DEBUG -d results tests/
 - `drag_and_drop` - Drag and Drop specific tests
 - `file_upload` - File Upload specific tests
 - `javascript_alerts` - JavaScript Alerts specific tests
+- `dynamic_loading` - Dynamic Loading specific tests
+- `ajax` - AJAX and dynamic content tests
 - `alerts` - Alert dialog tests
 - `interaction` - Interactive element tests
 

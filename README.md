@@ -49,6 +49,7 @@ Currently implemented test suites covering **69 test scenarios**:
 | **Drag and Drop** | 8 scenarios | Element manipulation, drag interactions, UI controls |
 | **File Upload** | 8 scenarios | File handling, form submissions, upload validation |
 | **JavaScript Alerts** | 8 scenarios | Alert dialogs, confirm dialogs, prompt dialogs |
+| **Dynamic Loading** | 8 scenarios | Dynamic content loading, element visibility, AJAX testing |
 
 ### Key Features
 - 🔍 **Smoke tests** for critical functionality validation
@@ -70,8 +71,8 @@ Raport:
 
 ## 📈 Test Results Dashboard
 
-```
-Total Tests: 61     ✅ Passing: 61     ❌ Failing: 0     Success Rate: 100%
+```bash
+Total Tests: 77     ✅ Passing: 77     ❌ Failing: 0     Success Rate: 100%
 ```
 
 **Latest Test Run Results:**
@@ -85,6 +86,7 @@ Total Tests: 61     ✅ Passing: 61     ❌ Failing: 0     Success Rate: 100%
 - **Drag and Drop**: 8/8 passing ✅
 - **File Upload**: 8/8 passing ✅
 - **JavaScript Alerts**: 8/8 passing ✅
+- **Dynamic Loading**: 8/8 passing ✅
 
 ## 🎬 Quick Demo
 
@@ -152,6 +154,7 @@ Automatic-Tests/
 │   ├── drag_and_drop.robot # Drag and Drop functionality tests (8 tests)
 │   ├── file_upload.robot  # File Upload functionality tests (8 tests)
 │   ├── javascript_alerts.robot # JavaScript Alerts functionality tests (8 tests)
+│   ├── dynamic_loading.robot # Dynamic Loading functionality tests (8 tests)
 │   └── ...                # Additional test files
 ├── keywords/              # Keyword files (reusable functions)
 │   ├── common_keywords.robot     # Common browser operations
@@ -165,6 +168,7 @@ Automatic-Tests/
 │   ├── drag_and_drop_keywords.robot # Drag and Drop operations
 │   ├── file_upload_keywords.robot # File Upload operations
 │   ├── javascript_alerts_keywords.robot # JavaScript Alerts operations
+│   ├── dynamic_loading_keywords.robot # Dynamic Loading operations
 │   └── ...                # Additional keyword files
 ├── resources/             # Resource files (variables, configuration)
 │   └── variables.robot    # Global variables and URLs
@@ -181,7 +185,7 @@ Automatic-Tests/
 ### Quick Start (Windows)
 Use the provided batch script for easy test execution:
 ```cmd
-# Run all tests (69 test cases)
+# Run all tests (77 test cases)
 run_tests.bat
 
 # Run only smoke tests (16 critical test cases)
@@ -213,6 +217,9 @@ run_tests.bat file_upload
 
 # Run JavaScript Alerts tests only (8 test cases)
 run_tests.bat javascript_alerts
+
+# Run Dynamic Loading tests only (8 test cases)
+run_tests.bat dynamic_loading
 
 # Run in headless mode
 run_tests.bat basic_auth
@@ -256,6 +263,9 @@ python -m robot -d results tests/file_upload.robot
 
 # JavaScript Alerts (8 test cases)
 python -m robot -d results tests/javascript_alerts.robot
+
+# Dynamic Loading (8 test cases)
+python -m robot -d results tests/dynamic_loading.robot
 ```
 
 #### Run tests with specific browser:
@@ -443,6 +453,19 @@ Tests JavaScript alert dialogs, confirm dialogs, and prompt dialogs:
 - TC008: Multiple JavaScript alerts operations
 
 **Tags:** `smoke`, `navigation`, `content`, `functionality`, `alerts`, `javascript_alerts`
+
+### Dynamic Loading (`tests/dynamic_loading.robot`)
+Tests dynamic content loading and element visibility changes:
+- TC001: Check Dynamic Loading link availability on homepage
+- TC002: Navigate to Dynamic Loading page
+- TC003: Verify Dynamic Loading page content
+- TC004: Test dynamic loading Example 1 - hidden element
+- TC005: Test dynamic loading Example 2 - rendered element
+- TC006: Verify loading states Example 1
+- TC007: Verify loading states Example 2
+- TC008: Multiple dynamic loading operations
+
+**Tags:** `smoke`, `navigation`, `content`, `functionality`, `ajax`, `dynamic_loading`
 
 ## Best Practices
 

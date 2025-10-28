@@ -10,6 +10,9 @@ ${DROPDOWN_URL}          ${BASE_URL}/dropdown
 ${DRAG_AND_DROP_URL}     ${BASE_URL}/drag_and_drop
 ${FILE_UPLOAD_URL}       ${BASE_URL}/upload
 ${JS_ALERTS_URL}         ${BASE_URL}/javascript_alerts
+${DYNAMIC_LOADING_URL}   ${BASE_URL}/dynamic_loading
+${DYNAMIC_LOADING_EXAMPLE1_URL}    ${BASE_URL}/dynamic_loading/1
+${DYNAMIC_LOADING_EXAMPLE2_URL}    ${BASE_URL}/dynamic_loading/2
 
 # Basic Auth credentials
 ${BASIC_AUTH_USER}       admin
@@ -36,6 +39,9 @@ ${DROPDOWN_LINK}         xpath=//a[@href='/dropdown']
 ${DRAG_AND_DROP_LINK}    xpath=//a[@href='/drag_and_drop']
 ${FILE_UPLOAD_LINK}      xpath=//a[@href='/upload']
 ${JS_ALERTS_LINK}        xpath=//a[@href='/javascript_alerts']
+${DYNAMIC_LOADING_LINK}  xpath=//a[@href='/dynamic_loading']
+${DYNAMIC_LOADING_EXAMPLE1_LINK}    xpath=//a[@href='/dynamic_loading/1']
+${DYNAMIC_LOADING_EXAMPLE2_LINK}    xpath=//a[@href='/dynamic_loading/2']
 ${ADD_ELEMENT_BUTTON}    xpath=//button[text()='Add Element']
 ${DELETE_BUTTON}         xpath=//button[contains(text(),'Delete')]
 ${CHECKBOX_1}            xpath=//input[@type='checkbox'][1]
@@ -51,4 +57,7 @@ ${JS_ALERT_BUTTON}       xpath=//button[contains(text(),'Click for JS Alert')]
 ${JS_CONFIRM_BUTTON}     xpath=//button[contains(text(),'Click for JS Confirm')]
 ${JS_PROMPT_BUTTON}      xpath=//button[contains(text(),'Click for JS Prompt')]
 ${RESULT_TEXT}           id=result
+${START_BUTTON}          xpath=//button[text()='Start']
+${LOADING_INDICATOR}     id=loading
+${HELLO_WORLD_TEXT}      id=finish
 ${PAGE_HEADER}           tag=h3
