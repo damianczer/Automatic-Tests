@@ -32,6 +32,9 @@ if "%1"=="smoke" (
 ) else if "%1"=="javascript_alerts" (
     echo Running JavaScript Alerts tests...
     python -m robot -d results tests/javascript_alerts.robot
+) else if "%1"=="dynamic_loading" (
+    echo Running Dynamic Loading tests...
+    python -m robot -d results tests/dynamic_loading.robot
 ) else if "%1"=="headless" (
     echo Running tests in headless mode...
     python -m robot -v HEADLESS:True -d results tests/

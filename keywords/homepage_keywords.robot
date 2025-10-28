@@ -55,3 +55,7 @@ Click File Upload Link
 Click JavaScript Alerts Link
     [Documentation]    Clicks JavaScript Alerts link on homepage
     Click Element And Wait    ${JS_ALERTS_LINK}
+
+Click Dynamic Loading Link
+    [Documentation]    Clicks Dynamic Loading link on homepage
+    Click Element And Wait    ${DYNAMIC_LOADING_LINK}
