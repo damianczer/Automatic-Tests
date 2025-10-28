@@ -51,3 +51,7 @@ Click Drag And Drop Link
 Click File Upload Link
     [Documentation]    Clicks File Upload link on homepage
     Click Element And Wait    ${FILE_UPLOAD_LINK}
+
+Click JavaScript Alerts Link
+    [Documentation]    Clicks JavaScript Alerts link on homepage
+    Click Element And Wait    ${JS_ALERTS_LINK}

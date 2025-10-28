@@ -36,7 +36,7 @@ This is a **complete test automation framework** that provides:
 ## 🚀 What's included?
 
 ### Test Coverage
-Currently implemented test suites covering **61 test scenarios**:
+Currently implemented test suites covering **69 test scenarios**:
 
 | Test Suite | Test Cases | Coverage |
 |------------|------------|----------|
@@ -48,6 +48,7 @@ Currently implemented test suites covering **61 test scenarios**:
 | **Dropdown** | 8 scenarios | Select elements, form validation, option management |
 | **Drag and Drop** | 8 scenarios | Element manipulation, drag interactions, UI controls |
 | **File Upload** | 8 scenarios | File handling, form submissions, upload validation |
+| **JavaScript Alerts** | 8 scenarios | Alert dialogs, confirm dialogs, prompt dialogs |
 
 ### Key Features
 - 🔍 **Smoke tests** for critical functionality validation
@@ -83,6 +84,7 @@ Total Tests: 61     ✅ Passing: 61     ❌ Failing: 0     Success Rate: 100%
 - **Dropdown**: 8/8 passing ✅
 - **Drag and Drop**: 8/8 passing ✅
 - **File Upload**: 8/8 passing ✅
+- **JavaScript Alerts**: 8/8 passing ✅
 
 ## 🎬 Quick Demo
 
@@ -149,6 +151,7 @@ Automatic-Tests/
 │   ├── dropdown.robot     # Dropdown functionality tests (8 tests)
 │   ├── drag_and_drop.robot # Drag and Drop functionality tests (8 tests)
 │   ├── file_upload.robot  # File Upload functionality tests (8 tests)
+│   ├── javascript_alerts.robot # JavaScript Alerts functionality tests (8 tests)
 │   └── ...                # Additional test files
 ├── keywords/              # Keyword files (reusable functions)
 │   ├── common_keywords.robot     # Common browser operations
@@ -161,6 +164,7 @@ Automatic-Tests/
 │   ├── dropdown_keywords.robot   # Dropdown operations
 │   ├── drag_and_drop_keywords.robot # Drag and Drop operations
 │   ├── file_upload_keywords.robot # File Upload operations
+│   ├── javascript_alerts_keywords.robot # JavaScript Alerts operations
 │   └── ...                # Additional keyword files
 ├── resources/             # Resource files (variables, configuration)
 │   └── variables.robot    # Global variables and URLs
@@ -177,7 +181,7 @@ Automatic-Tests/
 ### Quick Start (Windows)
 Use the provided batch script for easy test execution:
 ```cmd
-# Run all tests (61 test cases)
+# Run all tests (69 test cases)
 run_tests.bat
 
 # Run only smoke tests (16 critical test cases)
@@ -206,6 +210,9 @@ run_tests.bat drag_and_drop
 
 # Run File Upload tests only (8 test cases)
 run_tests.bat file_upload
+
+# Run JavaScript Alerts tests only (8 test cases)
+run_tests.bat javascript_alerts
 
 # Run in headless mode
 run_tests.bat basic_auth
@@ -246,6 +253,9 @@ python -m robot -d results tests/drag_and_drop.robot
 
 # File Upload (8 test cases)
 python -m robot -d results tests/file_upload.robot
+
+# JavaScript Alerts (8 test cases)
+python -m robot -d results tests/javascript_alerts.robot
 ```
 
 #### Run tests with specific browser:
@@ -420,6 +430,19 @@ Tests file upload functionality and form submissions:
 - TC008: File upload form validation
 
 **Tags:** `smoke`, `navigation`, `content`, `functionality`, `forms`, `file_upload`
+
+### JavaScript Alerts (`tests/javascript_alerts.robot`)
+Tests JavaScript alert dialogs, confirm dialogs, and prompt dialogs:
+- TC001: Check JavaScript Alerts link availability on homepage
+- TC002: Navigate to JavaScript Alerts page
+- TC003: Verify JavaScript Alerts page content
+- TC004: Test JavaScript Alert dialog
+- TC005: Test JavaScript Confirm dialog accept
+- TC006: Test JavaScript Confirm dialog dismiss
+- TC007: Test JavaScript Prompt dialog
+- TC008: Multiple JavaScript alerts operations
+
+**Tags:** `smoke`, `navigation`, `content`, `functionality`, `alerts`, `javascript_alerts`
 
 ## Best Practices
 

@@ -9,6 +9,7 @@
 - ✅ Working Dropdown tests (8 test cases)
 - ✅ Working Drag and Drop tests (8 test cases)
 - ✅ Working File Upload tests (8 test cases)
+- ✅ Working JavaScript Alerts tests (8 test cases)
 - ✅ Proper project structure with best practices
 - ✅ CI/CD pipeline configured
 - ✅ Cross-browser support (Chrome, Firefox)
@@ -46,6 +47,9 @@ run_tests.bat drag_and_drop
 
 # Run File Upload tests only
 run_tests.bat file_upload
+
+# Run JavaScript Alerts tests only
+run_tests.bat javascript_alerts
 
 # Run in headless mode
 run_tests.bat headless
@@ -152,6 +156,16 @@ python -m robot -L DEBUG -d results tests/
 - **TC007**: Multiple file upload operations
 - **TC008**: File upload form validation
 
+### JavaScript Alerts (`tests/javascript_alerts.robot`)
+- **TC001**: Check JavaScript Alerts link availability on homepage
+- **TC002**: Navigate to JavaScript Alerts page
+- **TC003**: Verify JavaScript Alerts page content
+- **TC004**: Test JavaScript Alert dialog
+- **TC005**: Test JavaScript Confirm dialog accept
+- **TC006**: Test JavaScript Confirm dialog dismiss
+- **TC007**: Test JavaScript Prompt dialog
+- **TC008**: Multiple JavaScript alerts operations
+
 ## 🏷️ Available Tags
 - `smoke` - Critical tests that must pass
 - `navigation` - Page navigation tests
@@ -169,6 +183,8 @@ python -m robot -L DEBUG -d results tests/
 - `dropdown` - Dropdown specific tests
 - `drag_and_drop` - Drag and Drop specific tests
 - `file_upload` - File Upload specific tests
+- `javascript_alerts` - JavaScript Alerts specific tests
+- `alerts` - Alert dialog tests
 - `interaction` - Interactive element tests
 
 ## 📁 Key Files
@@ -220,10 +236,8 @@ python -m robot --dryrun tests/
 ## 📈 Next Steps for Expansion
 Ready to add tests for other the-internet.herokuapp.com features:
 - Dynamic Content
-- File Upload
 - Form Authentication
 - Hovers
-- JavaScript Alerts
 - Key Presses
 - Inputs
 - Nested Frames
