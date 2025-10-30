@@ -11,6 +11,7 @@
 - ✅ Working File Upload tests (8 test cases)
 - ✅ Working JavaScript Alerts tests (8 test cases)
 - ✅ Working Dynamic Loading tests (8 test cases)
+- ✅ Working Hovers tests (8 test cases)
 - ✅ Proper project structure with best practices
 - ✅ CI/CD pipeline configured
 - ✅ Cross-browser support (Chrome, Firefox)
@@ -54,6 +55,9 @@ run_tests.bat javascript_alerts
 
 # Run Dynamic Loading tests only
 run_tests.bat dynamic_loading
+
+# Run Hovers tests only
+run_tests.bat hovers
 
 # Run in headless mode
 run_tests.bat headless
@@ -180,6 +184,16 @@ python -m robot -L DEBUG -d results tests/
 - **TC007**: Verify loading states Example 2
 - **TC008**: Multiple dynamic loading operations
 
+### Hovers (`tests/hovers.robot`)
+- **TC001**: Check Hovers link availability on homepage
+- **TC002**: Navigate to Hovers page
+- **TC003**: Verify Hovers page content
+- **TC004**: Test hover on User 1
+- **TC005**: Test hover on User 2
+- **TC006**: Test hover on User 3
+- **TC007**: Verify user profile links
+- **TC008**: Multiple hover operations
+
 ## 🏷️ Available Tags
 - `smoke` - Critical tests that must pass
 - `navigation` - Page navigation tests
@@ -199,6 +213,8 @@ python -m robot -L DEBUG -d results tests/
 - `file_upload` - File Upload specific tests
 - `javascript_alerts` - JavaScript Alerts specific tests
 - `dynamic_loading` - Dynamic Loading specific tests
+- `hovers` - Hovers specific tests
+- `interactions` - Mouse interactions and UI feedback tests
 - `ajax` - AJAX and dynamic content tests
 - `alerts` - Alert dialog tests
 - `interaction` - Interactive element tests

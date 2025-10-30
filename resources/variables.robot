@@ -13,6 +13,7 @@ ${JS_ALERTS_URL}         ${BASE_URL}/javascript_alerts
 ${DYNAMIC_LOADING_URL}   ${BASE_URL}/dynamic_loading
 ${DYNAMIC_LOADING_EXAMPLE1_URL}    ${BASE_URL}/dynamic_loading/1
 ${DYNAMIC_LOADING_EXAMPLE2_URL}    ${BASE_URL}/dynamic_loading/2
+${HOVERS_URL}            ${BASE_URL}/hovers
 
 # Basic Auth credentials
 ${BASIC_AUTH_USER}       admin
@@ -42,6 +43,7 @@ ${JS_ALERTS_LINK}        xpath=//a[@href='/javascript_alerts']
 ${DYNAMIC_LOADING_LINK}  xpath=//a[@href='/dynamic_loading']
 ${DYNAMIC_LOADING_EXAMPLE1_LINK}    xpath=//a[@href='/dynamic_loading/1']
 ${DYNAMIC_LOADING_EXAMPLE2_LINK}    xpath=//a[@href='/dynamic_loading/2']
+${HOVERS_LINK}           xpath=//a[@href='/hovers']
 ${ADD_ELEMENT_BUTTON}    xpath=//button[text()='Add Element']
 ${DELETE_BUTTON}         xpath=//button[contains(text(),'Delete')]
 ${CHECKBOX_1}            xpath=//input[@type='checkbox'][1]
@@ -60,4 +62,16 @@ ${RESULT_TEXT}           id=result
 ${START_BUTTON}          xpath=//button[text()='Start']
 ${LOADING_INDICATOR}     id=loading
 ${HELLO_WORLD_TEXT}      id=finish
+${USER_FIGURE_1}         xpath=//div[@class='figure'][1]
+${USER_FIGURE_2}         xpath=//div[@class='figure'][2]
+${USER_FIGURE_3}         xpath=//div[@class='figure'][3]
+${USER_IMAGE_1}          xpath=//div[@class='figure'][1]//img
+${USER_IMAGE_2}          xpath=//div[@class='figure'][2]//img
+${USER_IMAGE_3}          xpath=//div[@class='figure'][3]//img
+${USER_CAPTION_1}        xpath=//div[@class='figure'][1]//h5
+${USER_CAPTION_2}        xpath=//div[@class='figure'][2]//h5
+${USER_CAPTION_3}        xpath=//div[@class='figure'][3]//h5
+${USER_LINK_1}           xpath=//div[@class='figure'][1]//a
+${USER_LINK_2}           xpath=//div[@class='figure'][2]//a
+${USER_LINK_3}           xpath=//div[@class='figure'][3]//a
 ${PAGE_HEADER}           tag=h3
