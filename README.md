@@ -36,7 +36,7 @@ This is a **complete test automation framework** that provides:
 ## 🚀 What's included?
 
 ### Test Coverage
-Currently implemented test suites covering **69 test scenarios**:
+Currently implemented test suites covering **85 test scenarios**:
 
 | Test Suite | Test Cases | Coverage |
 |------------|------------|----------|
@@ -50,6 +50,7 @@ Currently implemented test suites covering **69 test scenarios**:
 | **File Upload** | 8 scenarios | File handling, form submissions, upload validation |
 | **JavaScript Alerts** | 8 scenarios | Alert dialogs, confirm dialogs, prompt dialogs |
 | **Dynamic Loading** | 8 scenarios | Dynamic content loading, element visibility, AJAX testing |
+| **Hovers** | 8 scenarios | Mouse hover interactions, tooltip display, UI feedback |
 
 ### Key Features
 - 🔍 **Smoke tests** for critical functionality validation
@@ -72,7 +73,7 @@ Raport:
 ## 📈 Test Results Dashboard
 
 ```bash
-Total Tests: 77     ✅ Passing: 77     ❌ Failing: 0     Success Rate: 100%
+Total Tests: 85     ✅ Passing: 85     ❌ Failing: 0     Success Rate: 100%
 ```
 
 **Latest Test Run Results:**
@@ -87,6 +88,7 @@ Total Tests: 77     ✅ Passing: 77     ❌ Failing: 0     Success Rate: 100%
 - **File Upload**: 8/8 passing ✅
 - **JavaScript Alerts**: 8/8 passing ✅
 - **Dynamic Loading**: 8/8 passing ✅
+- **Hovers**: 8/8 passing ✅
 
 ## 🎬 Quick Demo
 
@@ -155,6 +157,7 @@ Automatic-Tests/
 │   ├── file_upload.robot  # File Upload functionality tests (8 tests)
 │   ├── javascript_alerts.robot # JavaScript Alerts functionality tests (8 tests)
 │   ├── dynamic_loading.robot # Dynamic Loading functionality tests (8 tests)
+│   ├── hovers.robot       # Hovers functionality tests (8 tests)
 │   └── ...                # Additional test files
 ├── keywords/              # Keyword files (reusable functions)
 │   ├── common_keywords.robot     # Common browser operations
@@ -169,6 +172,7 @@ Automatic-Tests/
 │   ├── file_upload_keywords.robot # File Upload operations
 │   ├── javascript_alerts_keywords.robot # JavaScript Alerts operations
 │   ├── dynamic_loading_keywords.robot # Dynamic Loading operations
+│   ├── hovers_keywords.robot     # Hovers operations
 │   └── ...                # Additional keyword files
 ├── resources/             # Resource files (variables, configuration)
 │   └── variables.robot    # Global variables and URLs
@@ -185,7 +189,7 @@ Automatic-Tests/
 ### Quick Start (Windows)
 Use the provided batch script for easy test execution:
 ```cmd
-# Run all tests (77 test cases)
+# Run all tests (85 test cases)
 run_tests.bat
 
 # Run only smoke tests (16 critical test cases)
@@ -220,6 +224,9 @@ run_tests.bat javascript_alerts
 
 # Run Dynamic Loading tests only (8 test cases)
 run_tests.bat dynamic_loading
+
+# Run Hovers tests only (8 test cases)
+run_tests.bat hovers
 
 # Run in headless mode
 run_tests.bat basic_auth
@@ -266,6 +273,9 @@ python -m robot -d results tests/javascript_alerts.robot
 
 # Dynamic Loading (8 test cases)
 python -m robot -d results tests/dynamic_loading.robot
+
+# Hovers (8 test cases)
+python -m robot -d results tests/hovers.robot
 ```
 
 #### Run tests with specific browser:
@@ -466,6 +476,19 @@ Tests dynamic content loading and element visibility changes:
 - TC008: Multiple dynamic loading operations
 
 **Tags:** `smoke`, `navigation`, `content`, `functionality`, `ajax`, `dynamic_loading`
+
+### Hovers (`tests/hovers.robot`)
+Tests mouse hover interactions and tooltip display:
+- TC001: Check Hovers link availability on homepage
+- TC002: Navigate to Hovers page
+- TC003: Verify Hovers page content
+- TC004: Test hover on User 1
+- TC005: Test hover on User 2
+- TC006: Test hover on User 3
+- TC007: Verify user profile links
+- TC008: Multiple hover operations
+
+**Tags:** `smoke`, `navigation`, `content`, `functionality`, `interactions`, `hovers`
 
 ## Best Practices
 

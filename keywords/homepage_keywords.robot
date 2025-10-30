@@ -59,3 +59,7 @@ Click JavaScript Alerts Link
 Click Dynamic Loading Link
     [Documentation]    Clicks Dynamic Loading link on homepage
     Click Element And Wait    ${DYNAMIC_LOADING_LINK}
+
+Click Hovers Link
+    [Documentation]    Clicks Hovers link on homepage
+    Click Element And Wait    ${HOVERS_LINK}
