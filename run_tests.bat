@@ -38,6 +38,9 @@ if "%1"=="smoke" (
 ) else if "%1"=="hovers" (
     echo Running Hovers tests...
     python -m robot -d results tests/hovers.robot
+) else if "%1"=="inputs" (
+    echo Running Inputs tests...
+    python -m robot -d results tests/inputs.robot
 ) else if "%1"=="headless" (
     echo Running tests in headless mode...
     python -m robot -v HEADLESS:True -d results tests/
