@@ -36,7 +36,7 @@ This is a **complete test automation framework** that provides:
 ## 🚀 What's included?
 
 ### Test Coverage
-Currently implemented test suites covering **85 test scenarios**:
+Currently implemented test suites covering **93 test scenarios**:
 
 | Test Suite | Test Cases | Coverage |
 |------------|------------|----------|
@@ -51,6 +51,7 @@ Currently implemented test suites covering **85 test scenarios**:
 | **JavaScript Alerts** | 8 scenarios | Alert dialogs, confirm dialogs, prompt dialogs |
 | **Dynamic Loading** | 8 scenarios | Dynamic content loading, element visibility, AJAX testing |
 | **Hovers** | 8 scenarios | Mouse hover interactions, tooltip display, UI feedback |
+| **Inputs** | 8 scenarios | Number input validation, keyboard interactions, form fields |
 
 ### Key Features
 - 🔍 **Smoke tests** for critical functionality validation
@@ -73,7 +74,7 @@ Raport:
 ## 📈 Test Results Dashboard
 
 ```bash
-Total Tests: 85     ✅ Passing: 85     ❌ Failing: 0     Success Rate: 100%
+Total Tests: 93     ✅ Passing: 93     ❌ Failing: 0     Success Rate: 100%
 ```
 
 **Latest Test Run Results:**
@@ -89,6 +90,7 @@ Total Tests: 85     ✅ Passing: 85     ❌ Failing: 0     Success Rate: 100%
 - **JavaScript Alerts**: 8/8 passing ✅
 - **Dynamic Loading**: 8/8 passing ✅
 - **Hovers**: 8/8 passing ✅
+- **Inputs**: 8/8 passing ✅
 
 ## 🎬 Quick Demo
 
@@ -158,6 +160,7 @@ Automatic-Tests/
 │   ├── javascript_alerts.robot # JavaScript Alerts functionality tests (8 tests)
 │   ├── dynamic_loading.robot # Dynamic Loading functionality tests (8 tests)
 │   ├── hovers.robot       # Hovers functionality tests (8 tests)
+│   ├── inputs.robot       # Inputs functionality tests (8 tests)
 │   └── ...                # Additional test files
 ├── keywords/              # Keyword files (reusable functions)
 │   ├── common_keywords.robot     # Common browser operations
@@ -173,6 +176,7 @@ Automatic-Tests/
 │   ├── javascript_alerts_keywords.robot # JavaScript Alerts operations
 │   ├── dynamic_loading_keywords.robot # Dynamic Loading operations
 │   ├── hovers_keywords.robot     # Hovers operations
+│   ├── inputs_keywords.robot     # Inputs operations
 │   └── ...                # Additional keyword files
 ├── resources/             # Resource files (variables, configuration)
 │   └── variables.robot    # Global variables and URLs
@@ -189,7 +193,7 @@ Automatic-Tests/
 ### Quick Start (Windows)
 Use the provided batch script for easy test execution:
 ```cmd
-# Run all tests (85 test cases)
+# Run all tests (93 test cases)
 run_tests.bat
 
 # Run only smoke tests (16 critical test cases)
@@ -227,6 +231,9 @@ run_tests.bat dynamic_loading
 
 # Run Hovers tests only (8 test cases)
 run_tests.bat hovers
+
+# Run Inputs tests only (8 test cases)
+run_tests.bat inputs
 
 # Run in headless mode
 run_tests.bat basic_auth
@@ -276,6 +283,9 @@ python -m robot -d results tests/dynamic_loading.robot
 
 # Hovers (8 test cases)
 python -m robot -d results tests/hovers.robot
+
+# Inputs (8 test cases)
+python -m robot -d results tests/inputs.robot
 ```
 
 #### Run tests with specific browser:
@@ -489,6 +499,19 @@ Tests mouse hover interactions and tooltip display:
 - TC008: Multiple hover operations
 
 **Tags:** `smoke`, `navigation`, `content`, `functionality`, `interactions`, `hovers`
+
+### Inputs (`tests/inputs.robot`)
+Tests number input fields and keyboard interactions:
+- TC001: Check Inputs link availability on homepage
+- TC002: Navigate to Inputs page
+- TC003: Verify Inputs page content
+- TC004: Test number input with valid number
+- TC005: Test number input with negative number
+- TC006: Test number input with zero
+- TC007: Test number input increment and decrement
+- TC008: Multiple input operations
+
+**Tags:** `smoke`, `navigation`, `content`, `functionality`, `forms`, `inputs`
 
 ## Best Practices
 

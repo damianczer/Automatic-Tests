@@ -14,6 +14,7 @@ ${DYNAMIC_LOADING_URL}   ${BASE_URL}/dynamic_loading
 ${DYNAMIC_LOADING_EXAMPLE1_URL}    ${BASE_URL}/dynamic_loading/1
 ${DYNAMIC_LOADING_EXAMPLE2_URL}    ${BASE_URL}/dynamic_loading/2
 ${HOVERS_URL}            ${BASE_URL}/hovers
+${INPUTS_URL}            ${BASE_URL}/inputs
 
 # Basic Auth credentials
 ${BASIC_AUTH_USER}       admin
@@ -44,6 +45,7 @@ ${DYNAMIC_LOADING_LINK}  xpath=//a[@href='/dynamic_loading']
 ${DYNAMIC_LOADING_EXAMPLE1_LINK}    xpath=//a[@href='/dynamic_loading/1']
 ${DYNAMIC_LOADING_EXAMPLE2_LINK}    xpath=//a[@href='/dynamic_loading/2']
 ${HOVERS_LINK}           xpath=//a[@href='/hovers']
+${INPUTS_LINK}           xpath=//a[@href='/inputs']
 ${ADD_ELEMENT_BUTTON}    xpath=//button[text()='Add Element']
 ${DELETE_BUTTON}         xpath=//button[contains(text(),'Delete')]
 ${CHECKBOX_1}            xpath=//input[@type='checkbox'][1]
@@ -74,4 +76,5 @@ ${USER_CAPTION_3}        xpath=//div[@class='figure'][3]//h5
 ${USER_LINK_1}           xpath=//div[@class='figure'][1]//a
 ${USER_LINK_2}           xpath=//div[@class='figure'][2]//a
 ${USER_LINK_3}           xpath=//div[@class='figure'][3]//a
+${NUMBER_INPUT}          xpath=//input[@type='number']
 ${PAGE_HEADER}           tag=h3

@@ -63,3 +63,7 @@ Click Dynamic Loading Link
 Click Hovers Link
     [Documentation]    Clicks Hovers link on homepage
     Click Element And Wait    ${HOVERS_LINK}
+
+Click Inputs Link
+    [Documentation]    Clicks Inputs link on homepage
+    Click Element And Wait    ${INPUTS_LINK}
