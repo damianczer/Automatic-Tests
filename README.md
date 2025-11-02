@@ -61,7 +61,6 @@ Raport:
 <img width="913" height="890" alt="image" src="https://github.com/user-attachments/assets/af25dfc8-8fcf-4112-afc3-c300d6613a3d" />
 
 
-
 ## 📈 Test Results Dashboard
 
 ```bash
